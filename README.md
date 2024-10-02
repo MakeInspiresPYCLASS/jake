@@ -1,6 +1,4 @@
-##### (Optional) Install Python VSCode Extension
-
-<https://marketplace.visualstudio.com/items?itemName=ms-python.python>
+##### (Optional) Install [Python VSCode Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
 
 ### Create a [virtual environment](https://docs.python.org/3/tutorial/venv.html)
 
