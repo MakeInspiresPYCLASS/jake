@@ -13,7 +13,7 @@ FPS = 60
 FramePerSec = pygame.time.Clock()
 
 displaysurface = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Game")
+pygame.display.set_caption("Jake")
 
 class Player(pygame.sprite.Sprite):
     def __init__(self):
@@ -31,3 +31,21 @@ class platform(pygame.sprite.Sprite):
 
 PT1 = platform()
 P1 = Player()
+
+all_sprites = pygame.sprite.Group()
+all_sprites.add(PT1)
+all_sprites.add(P1)
+
+while True:
+    for event in pygame.event.get():
+        if event.type == QUIT:
+            pygame.quit()
+            sys.exit()
+
+    displaysurface.fill((255,255,255))
+
+    for entity in all_sprites:
+        displaysurface.blit(entity.surf, entity.rect)
+
+    pygame.display.update()
+    FramePerSec.tick(FPS)
